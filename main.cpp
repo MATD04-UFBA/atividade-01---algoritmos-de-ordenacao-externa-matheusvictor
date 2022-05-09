@@ -4,16 +4,28 @@
 #include <iostream>
 #include <algorithm>
 
-#include "utils.h"
+#include "headers\Ordenacao.h"
+#include "headers\Utilitarios.h"
 
 using namespace std;
 
-#define TAMANHO_MAXIMO 10
+int main(int argc, char** argv){
 
-int main(){
+    unsigned int numeroElementos = TAMANHO_MAXIMO;
 
-    vector<int> vetorDesordenado = gerarVetorDesordenado(TAMANHO_MAXIMO);
+    
+    if (argc > 1) {
+        numeroElementos = atoi(argv[1]);
+        if (numeroElementos > TAMANHO_MAXIMO) numeroElementos = TAMANHO_MAXIMO;
+    }
+    
 
-   ordenarPorMerge(vetorDesordenado);
+    Utilitarios utils;
+    Ordenadora ordenador;
+    vector<int> vetorDesordenado = utils.gerarVetorDesordenado(numeroElementos);
+    
+    utils.imprimirVetor(vetorDesordenado);
+    ordenador.ordenarPorMerge(vetorDesordenado);
+    utils.imprimirVetor(vetorDesordenado);
 
 }
