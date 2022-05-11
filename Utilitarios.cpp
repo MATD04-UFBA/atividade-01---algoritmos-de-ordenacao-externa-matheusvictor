@@ -4,12 +4,13 @@
 
 using namespace std;
 
-Utilitarios::Utilitarios(/* args */) { }
-
+Utilitarios::Utilitarios() { }
 Utilitarios::~Utilitarios() { }
 
 vector<int> Utilitarios::gerarVetorDesordenado(int tamanhoVetor) {
-  vector<int> vetorDesordenado;    
+  vector<int> vetorDesordenado;
+
+  srand(time(NULL));
 
   for (unsigned int i=0; i < tamanhoVetor; i++) {        
       vetorDesordenado.push_back(rand() % tamanhoVetor);
