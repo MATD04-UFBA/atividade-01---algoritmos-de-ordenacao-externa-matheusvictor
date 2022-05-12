@@ -25,55 +25,35 @@ int main(int argc, char** argv){
         cin >> numeroElementos;
     }
     
-    ManipuladorArquivoExterno arquivoExterno;
-    arquivoExterno.criarArquivoExterno("AEEEE.txt");
-
     Utilitarios utils;
+    Ordenadora ordenador;
     vector<int> vetorDesordenado = utils.gerarVetorDesordenado(numeroElementos);
     vector<int> vetorFinal (numeroElementos);
-
-    Ordenadora ordenador;
     
-    //utils.imprimirVetor(vetorDesordenado);
-
     if (numeroElementos > CAPACIDADE_MEMORIA) {
 
         int qtdBlocos = numeroElementos / CAPACIDADE_MEMORIA;        
         cout << "Serao necessarios " << qtdBlocos << " blocos de processamento para ordenacao completa..." << endl;
-        
-        vector<int> vetorTemporario (qtdBlocos);
-        int contadorBlocos = 0;
 
+        int contadorBlocos = 0;
+        ofstream arquivoTemporario;
+        
         while (contadorBlocos < qtdBlocos) {
-            cout << "contei " << contadorBlocos << " vezes" << endl;
+            
+            arquivoTemporario.open("outputs\\bloco_temp_" + std::to_string(contadorBlocos) + ".txt", ios::app);
+
+            for (int i = 0; i < CAPACIDADE_MEMORIA; i ++) {
+                arquivoTemporario << vetorDesordenado[i] << "\n";
+            }
+
+            arquivoTemporario.close();            
+            cout << "Contador de blocos = " << (contadorBlocos + 1) << endl;
             contadorBlocos++;
         }
 
-        for (int i = 0; i < vetorTemporario.size(); i++) {
-            vetorTemporario.push_back(vetorDesordenado[i]);
-            if (i == 99) {
-                continue;;
-            }
-        }
-
-        for (int i = 0; i < vetorTemporario.size(); i++) {
-            if (vetorTemporario[i] != 0) 
-                cout << vetorTemporario[i] << " - ";
-        }
-
-        cout << " ====================" << endl;
-
-        ordenador.ordenarPorMerge(vetorTemporario);
-
-        for (int i = 0; i < vetorTemporario.size(); i++) {
-            if (vetorTemporario[i] != 0) 
-                cout << vetorTemporario[i] << " - ";
-        }
-
+    } else {
+        ordenador.ordenarPorMerge(vetorDesordenado);
+        utils.imprimirVetor(vetorDesordenado);
     }
-
-
-    //ordenador.ordenarPorMerge(vetorDesordenado);
-    //utils.imprimirVetor(vetorDesordenado);
 
 }
