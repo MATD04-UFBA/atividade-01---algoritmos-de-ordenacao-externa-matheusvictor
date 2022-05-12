@@ -1,11 +1,13 @@
 #include <limits>
 #include <vector>
+#include <fstream>
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
 
 #include "headers\Ordenacao.h"
 #include "headers\Utilitarios.h"
+#include "headers\ManipuladorArquivoExterno.h"
 
 #define CAPACIDADE_MEMORIA 10
 
@@ -22,6 +24,9 @@ int main(int argc, char** argv){
         cout << ">> ";
         cin >> numeroElementos;
     }
+    
+    ManipuladorArquivoExterno arquivoExterno;
+    arquivoExterno.criarArquivoExterno("AEEEE.txt");
 
     Utilitarios utils;
     vector<int> vetorDesordenado = utils.gerarVetorDesordenado(numeroElementos);
@@ -32,15 +37,22 @@ int main(int argc, char** argv){
     //utils.imprimirVetor(vetorDesordenado);
 
     if (numeroElementos > CAPACIDADE_MEMORIA) {
+
         int qtdBlocos = numeroElementos / CAPACIDADE_MEMORIA;        
-        cout << "Serao necessarios " << qtdBlocos << " blocos de processamento...";
+        cout << "Serao necessarios " << qtdBlocos << " blocos de processamento para ordenacao completa..." << endl;
         
         vector<int> vetorTemporario (qtdBlocos);
+        int contadorBlocos = 0;
+
+        while (contadorBlocos < qtdBlocos) {
+            cout << "contei " << contadorBlocos << " vezes" << endl;
+            contadorBlocos++;
+        }
 
         for (int i = 0; i < vetorTemporario.size(); i++) {
             vetorTemporario.push_back(vetorDesordenado[i]);
-            if(i == 99) {
-                break;
+            if (i == 99) {
+                continue;;
             }
         }
 
@@ -60,13 +72,7 @@ int main(int argc, char** argv){
 
     }
 
-    cout << "meu vetor gerado tem " << vetorDesordenado.size() << " elementos";
-    cout << "meu vetor final tem " << vetorFinal.size() << " elementos";
 
-    
-    
-    
-    
     //ordenador.ordenarPorMerge(vetorDesordenado);
     //utils.imprimirVetor(vetorDesordenado);
 
