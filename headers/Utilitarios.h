@@ -1,6 +1,7 @@
 #include <vector>
 #include <limits>
 #include <string>
+#include <fstream>
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
@@ -21,5 +22,11 @@ class Utilitarios {
         vector<int> gerarVetorDesordenado(int tamanhoVetor);
     
         void imprimirVetor(vector<int> v);
+
+        bool criarArquivo(string nomeArquivo);
+
+        bool criarArquivoExterno(vector<int> v);
+
+        bool lerArquivo();
 
 };
