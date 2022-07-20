@@ -82,7 +82,3 @@ A divisão do número de elementos com `CAPACIDADE_MEMORIA` representaria, por s
 - [10] [Curso de C++ #50 - Operações com arquivos (ofstream) - Parte 1](https://www.youtube.com/watch?v=0ciLhd1oZc0) (Vídeo no YouTube)
 - [11] [Curso de C++ #51 - Operações com arquivos (ifstream) - Parte 2](https://www.youtube.com/watch?v=Tczymt0OkYo)
 - [12] [Converting an int to std::string](https://stackoverflow.com/questions/4668760/converting-an-int-to-stdstring)
-
--------
-
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7648401&assignment_repo_type=AssignmentRepo)
