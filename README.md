@@ -65,7 +65,7 @@ A divisão do número de elementos com `CAPACIDADE_MEMORIA` representaria, por s
 
 #### Para entender um pouco melhor sobre modularização e Classes em arquivos separados:
 
-  - [2] [#17 Introdução ao C++ / Classes em Arquivos Separados](https://www.youtube.com/watch?v=jrhofSNMalY&list=PLrOyM49ctTx9ZSF7W5y14ikyiZjLqWvx5&index=66) (Vídeo no YouTube)
+- [2] [#17 Introdução ao C++ / Classes em Arquivos Separados](https://www.youtube.com/watch?v=jrhofSNMalY&list=PLrOyM49ctTx9ZSF7W5y14ikyiZjLqWvx5&index=66) (Vídeo no YouTube)
 
 #### Para entender um pouco melhor sobre o *Merge Sort*:
 
@@ -75,11 +75,13 @@ A divisão do número de elementos com `CAPACIDADE_MEMORIA` representaria, por s
 - [6] [Merge Sort | Geeks for Geeks](https://www.geeksforgeeks.org/merge-sort/) (Material em inglês)
 - [7] [Merge Sort Algorithm](https://www.programiz.com/dsa/merge-sort) (Material em inglês)
 - [8] [Como fazer Merge Sort em Java - Canal do Código](https://www.youtube.com/watch?v=yj8igr9DjeY)
+- [9] [Complexidade de algoritmos - Notação Big O](https://dev.to/danielle8farias/complexidade-de-algoritmos-notacao-big-o-26al)
 
 #### Para saber mais sobre manipulação de arquivos de texto externos:
 
-- [9] [Curso de C++ #50 - Operações com arquivos (ofstream) - Parte 1](https://www.youtube.com/watch?v=0ciLhd1oZc0) (Vídeo no YouTube)
-- [10] [Curso de C++ #51 - Operações com arquivos (ifstream) - Parte 2](https://www.youtube.com/watch?v=Tczymt0OkYo)
+- [10] [Curso de C++ #50 - Operações com arquivos (ofstream) - Parte 1](https://www.youtube.com/watch?v=0ciLhd1oZc0) (Vídeo no YouTube)
+- [11] [Curso de C++ #51 - Operações com arquivos (ifstream) - Parte 2](https://www.youtube.com/watch?v=Tczymt0OkYo)
+- [12] [Converting an int to std::string](https://stackoverflow.com/questions/4668760/converting-an-int-to-stdstring)
 
 -------
 
